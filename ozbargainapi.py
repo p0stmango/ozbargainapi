@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 import feedparser, argparse
-from termcolor import colored
+#from termcolor import colored
 
 parser = argparse.ArgumentParser(description="A tool to search the latest ozbargain posts")
 parser.add_argument('searchstring')
