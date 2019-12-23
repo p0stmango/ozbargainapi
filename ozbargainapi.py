@@ -10,7 +10,6 @@ args = parser.parse_args()
 def feedDownloader(number):
 	finalarray = []
 	for x in range(1,number):
-#		print(x)
 		if x ==1:
 			d = feedparser.parse('https://www.ozbargain.com.au/deals/feed')
 		else:
@@ -30,7 +29,6 @@ def searcher(searcharg):
 		print(result)
 
 if args.searchstring == "all":
-#	usedArray = []
 	searchArray = feedDownloader(args.number)
 	for entry in searchArray:
 		print(entry)
