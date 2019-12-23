@@ -35,8 +35,13 @@ def searcher(searcharg):
 		print(result)
 
 if args.searchstring == "all":
+	usedArray = []
 	searchArray = feedDownloader(args.number)
 	for entry in searchArray:
-		print(entry)
+		if entry not in usedArray:
+			print(entry)
+			usedArray.append(entry)
+		else:
+			continue
 else:
 	searcher(args.searchstring)
