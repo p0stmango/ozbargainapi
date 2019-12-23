@@ -10,38 +10,29 @@ args = parser.parse_args()
 def feedDownloader(number):
 	finalarray = []
 	for x in range(1,number):
+#		print(x)
 		if x ==1:
-			d = feedparser.parse('https://www.ozbargain.com.au/feed')
+			d = feedparser.parse('https://www.ozbargain.com.au/deals/feed')
 		else:
-			d = feedparser.parse('https://www.ozbargain.com.au/feed/' + str(x))
+			d = feedparser.parse('https://www.ozbargain.com.au/deals/feed/' + str(x))
 		for entry in d['entries']:
 			finalarray.append(entry.title + " | " + entry.link)
-#	print(finalarray)
-	return(finalarray)
-#print(args.searchstring)
-#if args.number:
-#    print(args.number)
+	return(list(dict.fromkeys(finalarray)))
 
 def searcher(searcharg):
 	print("OZBARGAIN Search Results")
 	matches = []
 	searchArray = feedDownloader(args.number)
 	for entry in searchArray:
-#		print(entry)
 		if searcharg.lower() in entry.lower():
 			matches.append(entry)
-	matches = list(dict.fromkeys(matches))
 	for result in matches:
 		print(result)
 
 if args.searchstring == "all":
-	usedArray = []
+#	usedArray = []
 	searchArray = feedDownloader(args.number)
 	for entry in searchArray:
-		if entry not in usedArray:
-			print(entry)
-			usedArray.append(entry)
-		else:
-			continue
+		print(entry)
 else:
 	searcher(args.searchstring)
