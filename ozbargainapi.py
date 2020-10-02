@@ -2,6 +2,20 @@
 import feedparser, argparse
 #from termcolor import colored
 
+print("""
+ $$$$$$\  $$$$$$$$\ $$$$$$$\   $$$$$$\  $$$$$$$\   $$$$$$\   $$$$$$\  $$$$$$\ $$\   $$\ 
+$$  __$$\ \____$$  |$$  __$$\ $$  __$$\ $$  __$$\ $$  __$$\ $$  __$$\ \_$$  _|$$$\  $$ |
+$$ /  $$ |    $$  / $$ |  $$ |$$ /  $$ |$$ |  $$ |$$ /  \__|$$ /  $$ |  $$ |  $$$$\ $$ |
+$$ |  $$ |   $$  /  $$$$$$$\ |$$$$$$$$ |$$$$$$$  |$$ |$$$$\ $$$$$$$$ |  $$ |  $$ $$\$$ |
+$$ |  $$ |  $$  /   $$  __$$\ $$  __$$ |$$  __$$< $$ |\_$$ |$$  __$$ |  $$ |  $$ \$$$$ |
+$$ |  $$ | $$  /    $$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |  $$ |  $$ |  $$ |\$$$ |
+ $$$$$$  |$$$$$$$$\ $$$$$$$  |$$ |  $$ |$$ |  $$ |\$$$$$$  |$$ |  $$ |$$$$$$\ $$ | \$$ |
+ \______/ \________|\_______/ \__|  \__|\__|  \__| \______/ \__|  \__|\______|\__|  \__|
+                                                                                        
+                                                                                        
+                                                                                        
+""")
+
 parser = argparse.ArgumentParser(description="A tool to search the latest ozbargain posts")
 parser.add_argument('searchstring', help='The string to search for (use string \"all\" to print all entries)')
 parser.add_argument('-n', '--number', type=int, default=5, help='Number of pages to search')
